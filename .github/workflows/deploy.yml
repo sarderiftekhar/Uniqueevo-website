@@ -22,8 +22,8 @@ jobs:
           protocol: ftps
           security: loose
           server-dir: /
-          timeout: 60000
-          dangerous-clean-slate: true
+          timeout: 120000
+          log-level: verbose
           exclude: |
             **/.git*
             **/.git*/**
