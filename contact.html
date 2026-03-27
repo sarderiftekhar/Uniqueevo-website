@@ -24,12 +24,12 @@
     <style>
         /* Custom Contact Page Styles */
         .contact-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #6172D4;
             padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
         }
-        
+
         .contact-hero::before {
             content: '';
             position: absolute;
@@ -40,272 +40,324 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
-        
+
         .contact-hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
             color: white;
         }
-        
+
         .contact-hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #fff, #e0e7ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #fff;
         }
-        
+
         .contact-hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-        
+
         .office-info-item {
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 30px 25px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e8ecf4;
             transition: all 0.3s ease;
             margin-bottom: 30px;
             position: relative;
             overflow: hidden;
         }
-        
-        .office-info-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        
-        .office-info-item:hover::before {
-            left: 100%;
-        }
-        
+
         .office-info-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-        }
-        
-        .office-info-item.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #6172D4;
+            border-color: #6172D4;
             color: white;
         }
-        
+
+        .office-info-item:hover .office-info-icon {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        .office-info-item:hover .office-info-icon .fi:before,
+        .office-info-item:hover .office-info-icon .icon .fi:before {
+            color: white !important;
+        }
+
+        .office-info-item:hover .office-info-text h2 {
+            color: white;
+        }
+
+        .office-info-item:hover .office-info-text p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .office-info-item.active {
+            background: #6172D4;
+            color: white;
+            border-color: #6172D4;
+        }
+
         .office-info-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            background: rgba(97, 114, 212, 0.08);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
+            margin: 0 auto 18px;
+            font-size: 1.5rem;
+            color: #6172D4;
+        }
+
+        .office-info-icon .fi:before,
+        .office-info-icon .icon .fi:before {
+            color: #6172D4;
+            font-size: 28px;
+        }
+
+        .office-info-item.active .office-info-icon {
+            background: rgba(255, 255, 255, 0.15);
             color: white;
         }
-        
-        .office-info-item.active .office-info-icon {
-            background: rgba(255, 255, 255, 0.2);
+
+        .office-info-item.active .office-info-icon .fi:before,
+        .office-info-item.active .office-info-icon .icon .fi:before {
+            color: white !important;
         }
-        
+
         .office-info-text h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #2d3748;
         }
-        
+
         .office-info-item.active .office-info-text h2 {
             color: white;
         }
-        
+
         .office-info-text p {
             color: #718096;
             line-height: 1.6;
+            font-size: 0.95rem;
         }
-        
+
         .office-info-item.active .office-info-text p {
             color: rgba(255, 255, 255, 0.9);
         }
-        
-        .contact-form {
-            background: white;
-            border-radius: 20px;
-            padding: 40px 20px;
-            box-shadow: none;
-            width: 100%;
-            max-width: none;
-            margin: 0;
+
+        .ue-form-card {
+            background: #6172D4;
+            border-radius: 16px;
+            padding: 44px 38px;
+            border: none;
         }
-        
-        .contact-form h2 {
+
+        .ue-form-card h2 {
             font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 8px;
+            color: #fff;
+        }
+
+        .ue-form-card .ue-form-sub {
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0 0 28px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .ue-field {
+            margin-bottom: 16px;
+        }
+
+        .ue-field label {
+            display: block;
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 15px;
-            color: #2d3748;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 6px;
         }
-        
-        .contact-form p {
-            color: #718096;
-            margin-bottom: 30px;
-        }
-        
-        .input-item {
-            position: relative;
-            margin-bottom: 25px;
+
+        .ue-field input,
+        .ue-field textarea,
+        .ue-field select {
             width: 100%;
-        }
-        
-        .input-item .fild {
-            width: 100%;
-            padding: 22px 35px 22px 45px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: #f8fafc;
+            padding: 12px 14px;
+            border: 1.5px solid #e2e6ef;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #1a202c;
+            background: #fff;
             box-sizing: border-box;
-            min-width: 100%;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
         }
-        
-        .input-item .fild:focus {
+
+        .ue-field input::placeholder,
+        .ue-field textarea::placeholder {
+            color: #b0b8c9;
+        }
+
+        .ue-field input:focus,
+        .ue-field textarea:focus,
+        .ue-field select:focus {
             outline: none;
-            border-color: #667eea;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #fff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
         }
-        
-        .input-item .textarea {
-            min-height: 120px;
+
+        .ue-field select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%236172D4' d='M5 6L0 0h10z'/%3E%3C/svg%3E") no-repeat right 14px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        .ue-field textarea {
+            min-height: 110px;
             resize: vertical;
         }
-        
-        .input-item label {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #667eea;
-            font-size: 1.1rem;
-            z-index: 1;
-            pointer-events: none;
+
+        .ue-field-row {
+            display: flex;
+            gap: 12px;
         }
-        
-        .submitbtn input {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
+
+        .ue-field-row .ue-field {
+            flex: 1;
+        }
+
+        .ue-submit-btn {
+            display: inline-block;
+            background: #fff;
+            color: #6172D4;
             border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
+            transition: all 0.2s ease;
+            margin-top: 8px;
         }
-        
-        .submitbtn input:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+
+        .ue-submit-btn:hover {
+            background: #f0f0f0;
         }
-        
+
+        @media (max-width: 576px) {
+            .ue-field-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .ue-form-card {
+                padding: 28px 20px;
+            }
+        }
+
         .map {
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e8ecf4;
+            width: 100%;
+            flex: 1;
+            min-height: 300px;
         }
-        
+
         .map iframe {
             width: 100%;
-            height: 400px;
+            height: 100%;
+            min-height: 300px;
             border: none;
+            display: block;
         }
-        
+
         .contact-left h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #2d3748;
+            margin-bottom: 16px;
+            color: #6172D4;
         }
-        
+
         .contact-left p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #718096;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
-        
+
         /* Privacy Policy Modal Styles */
         .privacy-content {
             line-height: 1.6;
             color: #333;
         }
-        
+
         .privacy-content h6 {
-            color: #667eea;
+            color: #6172D4;
             font-weight: 600;
             margin-top: 25px;
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
-        
+
         .privacy-content p {
             margin-bottom: 15px;
         }
-        
+
         .privacy-content ul {
             margin-bottom: 15px;
             padding-left: 20px;
         }
-        
+
         .privacy-content li {
             margin-bottom: 5px;
         }
-        
+
         .modal-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #6172D4;
             color: white;
             border-bottom: none;
         }
-        
+
         .modal-title {
             font-weight: 600;
         }
-        
+
         .btn-close {
             filter: invert(1);
         }
-        
+
         .modal-footer {
             border-top: 1px solid #e9ecef;
             background: #f8f9fa;
         }
-        
+
         .btn-primary {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #6172D4;
             border: none;
         }
-        
+
         .btn-primary:hover {
-            background: linear-gradient(135deg, #5a6fd8, #6a4190);
+            background: #4f60c0;
         }
-        
+
         @media (max-width: 768px) {
             .contact-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .contact-form {
-                padding: 30px 20px;
+                padding: 24px 18px;
             }
         }
     </style>
@@ -437,7 +489,6 @@
                                 <div class="office-info-text">
                                     <h2>Email Address</h2>
                                     <p>sales@uniqevo.co.uk<br>
-                                        info@uniqevo.co.uk<br>
                                         We reply within 24 hours</p>
                                 </div>
                             </div>
@@ -446,59 +497,61 @@
                 </div>
 
                 <div class="contact-wrap">
-                    <div class="row">
-                        <div class="col-lg-6 col-12">
-                            <div class="contact-left">
+                    <div class="row align-items-stretch">
+                        <div class="col-lg-6 col-12 d-flex">
+                            <div class="contact-left d-flex flex-column" style="width:100%">
                                 <h2>Get in touch</h2>
                                 <p>Ready to start your next project? We're here to help you transform your ideas into powerful digital solutions. Our team of experienced developers and designers is ready to bring your vision to life.</p>
                                 <div class="map">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.123456789!2d0.0234567!3d51.5123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sWillett%20House%2C%20Queens%20Road%20West%2C%20Plaistow%2C%20London%20E13%200RX!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5!2d0.0166!3d51.5148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7c1b5b3f5b1%3A0x1!2sWillett+House%2C+Queens+Rd+W%2C+Plaistow%2C+London+E13+0RX!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
                                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="contact-right">
-                                <div class="contact-form" style="width: 100%; margin: 0; padding: 40px 10px;">
+                        <div class="col-lg-6 col-12 d-flex">
+                            <div class="contact-right d-flex" style="width:100%">
+                                <div class="ue-form-card" style="width:100%; display:flex; flex-direction:column;">
                                     <h2>Send us a message</h2>
-                                    <p>Fill out the form below and we'll get back to you within 24 hours. We're excited to hear about your project!</p>
-                                    <form class="contact-form contact-validation-active" id="contact-form">
-                                        <div class="input-item">
-                                            <input id="name" class="fild" type="text" placeholder="Your Name*" required>
-                                            <label><i class="flaticon-user"></i></label>
+                                    <p class="ue-form-sub">Fill out the form below and we'll get back to you within 24 hours.</p>
+                                    <form id="contact-form-ue" style="flex:1; display:flex; flex-direction:column;">
+                                        <input type="hidden" name="_to" value="sarder2008@gmail.com">
+                                        <input type="hidden" name="_subject" value="New enquiry from Unique Evolution website">
+                                        <div class="ue-field-row">
+                                            <div class="ue-field">
+                                                <label for="ue-name">Full Name *</label>
+                                                <input id="ue-name" name="name" type="text" placeholder="John Doe" required>
+                                            </div>
+                                            <div class="ue-field">
+                                                <label for="ue-email">Email Address *</label>
+                                                <input id="ue-email" name="email" type="email" placeholder="john@example.com" required>
+                                            </div>
                                         </div>
-                                        <div class="input-item">
-                                            <input id="email" name="email" class="fild" type="email" placeholder="Email Address*" required>
-                                            <label><i class="flaticon-email"></i></label>
+                                        <div class="ue-field-row">
+                                            <div class="ue-field">
+                                                <label for="ue-phone">Phone Number</label>
+                                                <input id="ue-phone" name="phone" type="tel" placeholder="+44 7000 000000">
+                                            </div>
+                                            <div class="ue-field">
+                                                <label for="ue-service">Service Required *</label>
+                                                <select id="ue-service" name="service" required>
+                                                    <option value="">Choose a service</option>
+                                                    <option value="Web Development">Web Development</option>
+                                                    <option value="Mobile App Development">Mobile App Development</option>
+                                                    <option value="Custom Software">Custom Software</option>
+                                                    <option value="UI/UX Design">UI/UX Design</option>
+                                                    <option value="Cloud Solutions & DevOps">Cloud Solutions & DevOps</option>
+                                                    <option value="E-Commerce & Marketplace">E-Commerce & Marketplace</option>
+                                                    <option value="Free Consultation">Free Consultation</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="input-item">
-                                            <input id="phone" class="fild" type="tel" placeholder="Phone Number">
-                                            <label><i class="flaticon-phone-call"></i></label>
+                                        <div class="ue-field">
+                                            <label for="ue-message">Project Details *</label>
+                                            <textarea id="ue-message" name="message" placeholder="Tell us about your project, timeline, and budget..." required></textarea>
                                         </div>
-                                        <div class="input-item">
-                                            <select class="fild" id="service" required>
-                                                <option value="">Select Service*</option>
-                                                <option value="web-development">Web Development</option>
-                                                <option value="mobile-app">Mobile App Development</option>
-                                                <option value="custom-software">Custom Software</option>
-                                                <option value="ui-ux-design">UI/UX Design</option>
-                                                <option value="cloud-solutions">Cloud Solutions</option>
-                                                <option value="consultation">Free Consultation</option>
-                                            </select>
-                                            <label><i class="flaticon-settings"></i></label>
-                                        </div>
-                                        <div class="input-item">
-                                            <textarea id="message" class="fild textarea" placeholder="Tell us about your project*" required></textarea>
-                                            <label><i class="flaticon-edit"></i></label>
-                                        </div>
-                                        <div class="input-item submitbtn">
-                                            <input class="fild" type="submit" value="Send Message">
-                                        </div>
-                                        <div class="clearfix error-handling-messages">
-                                            <div id="success">Thank you! We'll get back to you soon.</div>
-                                            <div id="error">Error occurred while sending message. Please try again later.</div>
-                                        </div>
+                                        <button type="submit" class="ue-submit-btn" id="ue-submit-btn">Send Message</button>
+                                        <div id="ue-form-status" style="margin-top:12px; font-size:14px; font-weight:600;"></div>
                                     </form>
                                 </div>
                             </div>
@@ -695,6 +748,47 @@
     <script src="assets/js/gsap-script.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/search.js"></script>
+    <script>
+    (function() {
+        var form = document.getElementById('contact-form-ue');
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('ue-submit-btn');
+            var status = document.getElementById('ue-form-status');
+            var formData = new FormData(form);
+
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            status.textContent = '';
+
+            fetch('https://formsubmit.co/ajax/sarder2008@gmail.com', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    status.style.color = '#d4edda';
+                    status.textContent = 'Thank you! Your message has been sent successfully.';
+                    form.reset();
+                } else {
+                    status.style.color = '#f8d7da';
+                    status.textContent = 'Something went wrong. Please try again.';
+                }
+            })
+            .catch(function() {
+                status.style.color = '#f8d7da';
+                status.textContent = 'Network error. Please check your connection.';
+            })
+            .finally(function() {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+            });
+        });
+    })();
+    </script>
 </body>
 
 </html>

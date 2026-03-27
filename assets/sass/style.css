@@ -2793,6 +2793,108 @@ img {
   }
 }
 
+/* Projects Showcase Section */
+.wpo-projects-showcase {
+  background: #f8fafc;
+}
+.wpo-projects-showcase .wpo-section-title {
+  margin-bottom: 40px;
+}
+.projects-grid {
+  background: #6172D4;
+  padding: 6px;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.projects-grid .row {
+  margin: 0;
+}
+.projects-grid .row > [class*="col-"] {
+  padding: 3px;
+}
+.project-item {
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+}
+.project-item.shuffle-out {
+  animation: shuffleOut 0.4s ease forwards;
+}
+.project-item.shuffle-in {
+  animation: shuffleIn 0.4s ease forwards;
+}
+@keyframes shuffleOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.92); }
+}
+@keyframes shuffleIn {
+  0% { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.col-md-6 .project-item {
+  padding-bottom: 48%;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(97, 114, 212, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.95);
+}
+.project-item:hover .project-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+.project-overlay h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.project-overlay p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.project-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .project-item {
+    padding-bottom: 70%;
+  }
+  .col-md-6 .project-item {
+    padding-bottom: 70%;
+  }
+}
+
 @media (max-width: 1199px) {
   .wpo-hero-section {
     margin-left: 60px;
