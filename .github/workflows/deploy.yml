@@ -20,8 +20,10 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps
+          security: loose
           server-dir: /
           timeout: 60000
+          dangerous-clean-slate: true
           exclude: |
             **/.git*
             **/.git*/**
