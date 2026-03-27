@@ -21,6 +21,62 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+    <style>
+        /* Privacy Policy Modal Styles */
+        .privacy-content {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .privacy-content h6 {
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 5px;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-bottom: none;
+        }
+        
+        .modal-title {
+            font-weight: 600;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #e9ecef;
+            background: #f8f9fa;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8, #6a4190);
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +91,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="assets/images/logo.png" alt="Unique Evolution" class="preloader-logo">
                 </div>
             </div>
         </div>
@@ -70,27 +126,6 @@
                                         <li>
                                             <a href="service.html">Services</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right
-                                                                sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details
-                                                                left
-                                                                sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
                                         <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </div>
@@ -109,14 +144,15 @@
                                             <button class="search-toggle-btn"><i
                                                     class="fi flaticon-magnifying-glass"></i></button>
                                             <div class="header-search-form">
-                                                <form>
+                                                <form id="siteSearchForm" onsubmit="return false;">
                                                     <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
+                                                        <input type="text" class="form-control" id="siteSearchInput"
+                                                            placeholder="Search here..." autocomplete="off">
                                                         <button type="submit"><i
                                                                 class="fi flaticon-magnifying-glass"></i></button>
                                                     </div>
                                                 </form>
+                                                <div id="searchResults" class="search-results-dropdown"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -148,18 +184,55 @@
 
         <!-- start hero section -->
         <section class="wpo-hero-section">
+            <!-- Slideshow Background -->
+            <div class="hero-slideshow">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero/slide-1.jpg')"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero/slide-2.jpg')"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero/slide-3.jpg')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+
             <div class="container-fluid">
                 <div class="hero-wapper">
                     <div class="hero-content">
-                        <div class="hero-title wow fadeInUp" data-wow-delay="0.0s">
-                            <span>Innovative Software Solutions That Drive Success.</span>
+                        <!-- Slide 1 Text -->
+                        <div class="hero-text-slide active" data-text-slide="0">
+                            <div class="hero-title">
+                                <span>Innovative Software Solutions That Drive Success.</span>
+                            </div>
+                            <div class="hero-sub-title">
+                                <h2>Building Your <br><span class="multicolor-text">Digital</span> <span class="blue-text">Future</span> <br><span class="blue-text">Securely</span> & <span class="multicolor-text">Efficiently</span></h2>
+                            </div>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="theme-btn-s2">Get Free Consultation</a>
+                                <a href="service.html" class="theme-btn-s3"><span class="rolling-text">View Our Work</span></a>
+                            </div>
                         </div>
-                        <div class="hero-sub-title wow fadeInUp" data-wow-delay="0.3s">
-                            <h2>Building Your <br><span class="multicolor-text">Digital</span> <span class="blue-text">Future</span> <br><span class="blue-text">Securely</span> & <span class="multicolor-text">Efficiently</span></h2>
+                        <!-- Slide 2 Text -->
+                        <div class="hero-text-slide" data-text-slide="1">
+                            <div class="hero-title">
+                                <span>25+ Years of Trusted Software Engineering.</span>
+                            </div>
+                            <div class="hero-sub-title">
+                                <h2>From <span class="multicolor-text">Concept</span> to <br><span class="blue-text">Code</span> to <span class="multicolor-text">Launch</span> <br>We <span class="blue-text">Deliver</span></h2>
+                            </div>
+                            <div class="hero-btns">
+                                <a href="service.html" class="theme-btn-s2">Explore Services</a>
+                                <a href="about.html" class="theme-btn-s3"><span class="rolling-text">About Us</span></a>
+                            </div>
                         </div>
-                        <div class="hero-btns wow fadeInUp" data-wow-delay="0.6s">
-                            <a href="contact.html" class="theme-btn-s2">Get Free Consultation</a>
-                            <a href="about.html" class="theme-btn-s3"><span class="rolling-text">View Our Work</span></a>
+                        <!-- Slide 3 Text -->
+                        <div class="hero-text-slide" data-text-slide="2">
+                            <div class="hero-title">
+                                <span>Empowering Businesses Through Technology.</span>
+                            </div>
+                            <div class="hero-sub-title">
+                                <h2>Web, Mobile & <br><span class="multicolor-text">Cloud</span> <span class="blue-text">Solutions</span> <br>Built to <span class="blue-text">Scale</span></h2>
+                            </div>
+                            <div class="hero-btns">
+                                <a href="contact.html" class="theme-btn-s2">Start Your Project</a>
+                                <a href="project.html" class="theme-btn-s3"><span class="rolling-text">Our Projects</span></a>
+                            </div>
                         </div>
 
                         <div class="hero-content-shape wow fadeInLeftSlow" data-wow-duration="1200ms">
@@ -191,8 +264,11 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="shape-2">
-                        <img src="assets/images/hero/shape-2.png" alt="shape">
+                    <!-- Slide indicators -->
+                    <div class="hero-slide-indicators">
+                        <button class="slide-dot active" data-slide="0"></button>
+                        <button class="slide-dot" data-slide="1"></button>
+                        <button class="slide-dot" data-slide="2"></button>
                     </div>
                 </div>
             </div>
@@ -232,6 +308,12 @@
                                     <li><span>Web & Mobile Applications</span></li>
                                     <li><span>UI/UX Design & Branding</span></li>
                                     <li><span>Cloud Solutions & DevOps</span></li>
+                                    <li><span>E-Commerce & Marketplace Platforms</span></li>
+                                    <li><span>Accounting & Financial Software</span></li>
+                                    <li><span>AI & Machine Learning Solutions</span></li>
+                                    <li><span>ERP & Business Management Systems</span></li>
+                                    <li><span>Browser Extensions & Automation</span></li>
+                                    <li><span>Data Analytics & ETL Pipelines</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -455,7 +537,7 @@
                                 <img src="assets/images/feature/5.svg" alt="icon">
                             </div>
                             <div class="text">
-                                <h3><a href="service-single.html">3+ Years
+                                <h3><a href="service-single.html">25+ Years
                                         of Experience</a>
                                 </h3>
                             </div>
@@ -495,19 +577,19 @@
                     </div>
                 <div class="odometer-content">
                     <div class="odometer-items wow fadeInUp" data-wow-delay="0.0s">
-                        <h2><span class="odometer" data-count="3">00</span></h2>
-                        <h3>3+ Years of Experience</h3>
+                        <h2><span class="odometer" data-count="25">00</span></h2>
+                        <h3>25+ Years of Experience</h3>
                     </div>
                     <div class="odometer-items wow fadeInUp" data-wow-delay="0.1s">
-                        <h2><span class="odometer" data-count="500">00</span><span class="small">+</span></h2>
+                        <h2><span class="odometer" data-count="100">00</span><span class="small">+</span></h2>
                         <h3>Projects Completed</h3>
                     </div>
                     <div class="odometer-items wow fadeInUp" data-wow-delay="0.2s">
-                        <h2><span class="odometer" data-count="50">00</span><span class="small">+</span></h2>
+                        <h2><span class="odometer" data-count="10">00</span><span class="small">+</span></h2>
                         <h3>Team Members</h3>
                     </div>
                     <div class="odometer-items wow fadeInUp" data-wow-delay="0.3s">
-                        <h2><span class="odometer" data-count="98">00</span><span class="small">%</span></h2>
+                        <h2><span class="odometer" data-count="99">00</span><span class="small">%</span></h2>
                         <h3>Client Satisfaction</h3>
                     </div>
                 </div>
@@ -595,9 +677,9 @@
                     <div class="col-lg-10 col-12">
                         <div class="wpo-section-title">
                             <span>Our starting history</span>
-                            <h2 class="poort-text poort-in-right">Since our inception in 2022, we
+                            <h2 class="poort-text poort-in-right">Since our inception, we
                                 have been dedicated to pioneering
-                                the electricty industry in UK</h2>
+                                the software industry in UK</h2>
                         </div>
                     </div>
                 </div>
@@ -754,13 +836,12 @@
                 <div class="marquee_container">
                     <div>
                         <h2 class="marquee-s2">
-                            <small>Schedule a Free Electrical System Evaluation. Plan Your Free Energy
-                                Efficiency Consultation</small>
+                            <small>Transform your ideas into powerful digital solutions. Get your free consultation today!</small>
                         </h2>
                     </div>
                 </div>
-                <div class="booking-btn moving-cursor"><a class="btn-wrapper btn-move" href="contact.html"><small>Get
-                            Schedule
+                            <div class="booking-btn moving-cursor"><a class="btn-wrapper btn-move" href="contact.html"><small>Get
+                            Started
                             Now</small></a></div>
             </div>
         </section>
@@ -777,14 +858,13 @@
                             <div class="marquee_container">
                                 <div>
                                     <h2 class="marquee-s2">
-                                        <small>Schedule a Free Electrical System Evaluation. Plan Your Free Energy
-                                            Efficiency Consultation</small>
+                                        <small>Innovative software solutions that drive business growth. Start your digital transformation journey with us!</small>
                                     </h2>
                                 </div>
                             </div>
                             <div class="booking-btn moving-cursor"><a class="btn-wrapper btn-move"
                                     href="contact.html"><small>Get
-                                        Schedule Now</small></a></div>
+                                        Started Now</small></a></div>
                         </div>
                     </div>
                 </div>
@@ -801,19 +881,8 @@
                                         <button type="submit" class="theme-btn-s2">Sign Up</button>
                                     </div>
                                 </form>
-                                <p>By subscribing, you’re accept <a href="contact.html">Privacy Policy</a></p>
+                                <p>By subscribing, you're accept <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" style="cursor: pointer;">Privacy Policy</a></p>
                             </div>
-                        </div>
-                        <div class="item fade_bottom">
-                            <h2 class="title">Company</h2>
-                            <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="service.html">Our Services</a></li>
-                                <li><a href="team.html">Our Team</a></li>
-                                <li><a href="contact.html">Careers</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
                         </div>
                         <div class="item fade_bottom">
                             <h2 class="title">Services</h2>
@@ -824,17 +893,6 @@
                                 <li><a href="service.html">UI/UX Design</a></li>
                                 <li><a href="service.html">Cloud Solutions</a></li>
                                 <li><a href="contact.html">Get Quote</a></li>
-                            </ul>
-                        </div>
-                        <div class="item fade_bottom">
-                            <h2 class="title">Portfolio</h2>
-                            <ul>
-                                <li><a href="project.html">Web Applications</a></li>
-                                <li><a href="project.html">Mobile Apps</a></li>
-                                <li><a href="project.html">SaaS Platforms</a></li>
-                                <li><a href="project.html">E-commerce</a></li>
-                                <li><a href="project.html">Custom Solutions</a></li>
-                                <li><a href="project.html">Case Studies</a></li>
                             </ul>
                         </div>
                     </div>
@@ -849,11 +907,9 @@
                                         All rights reserved.</p>
                                 </div>
                                 <div class="col-lg-6 col-12">
-                                    <ul class="widget-social">
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="project.html">Portfolio</a></li>
-                                    </ul>
+                                    <div class="widget-social">
+                                        <a href="contact.html">Contact</a> <span style="color: #D1D1D1; margin: 0 10px;">|</span> <a href="service.html">Services</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -866,6 +922,113 @@
     </div>
     <!-- end of page-wrapper -->
 
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="privacy-content">
+                        <p><strong>Last Updated:</strong> January 2025</p>
+                        
+                        <h6>1. Introduction</h6>
+                        <p>Unique Evolution ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                        
+                        <h6>2. Information We Collect</h6>
+                        <p><strong>Personal Information:</strong></p>
+                        <ul>
+                            <li>Name and contact information (email, phone number, address)</li>
+                            <li>Business information (company name, job title)</li>
+                            <li>Project requirements and specifications</li>
+                            <li>Communication preferences</li>
+                        </ul>
+                        
+                        <p><strong>Technical Information:</strong></p>
+                        <ul>
+                            <li>IP address and browser information</li>
+                            <li>Website usage data and analytics</li>
+                            <li>Cookies and similar tracking technologies</li>
+                            <li>Device information and operating system</li>
+                        </ul>
+                        
+                        <h6>3. How We Use Your Information</h6>
+                        <p>We use your information to:</p>
+                        <ul>
+                            <li>Provide and improve our software development services</li>
+                            <li>Communicate with you about projects and services</li>
+                            <li>Send newsletters and marketing communications (with your consent)</li>
+                            <li>Process payments and manage billing</li>
+                            <li>Comply with legal obligations</li>
+                            <li>Analyze website performance and user experience</li>
+                        </ul>
+                        
+                        <h6>4. Information Sharing</h6>
+                        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                        <ul>
+                            <li>With your explicit consent</li>
+                            <li>To comply with legal requirements</li>
+                            <li>With trusted service providers who assist in our operations</li>
+                            <li>In case of business transfers or mergers</li>
+                        </ul>
+                        
+                        <h6>5. Data Security</h6>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes:</p>
+                        <ul>
+                            <li>SSL encryption for data transmission</li>
+                            <li>Secure servers and databases</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Access controls and authentication</li>
+                        </ul>
+                        
+                        <h6>6. Your Rights</h6>
+                        <p>Under applicable data protection laws, you have the right to:</p>
+                        <ul>
+                            <li>Access your personal information</li>
+                            <li>Correct inaccurate data</li>
+                            <li>Request deletion of your data</li>
+                            <li>Object to processing of your data</li>
+                            <li>Data portability</li>
+                            <li>Withdraw consent at any time</li>
+                        </ul>
+                        
+                        <h6>7. Cookies and Tracking</h6>
+                        <p>We use cookies and similar technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookie settings through your browser preferences.</p>
+                        
+                        <h6>8. Third-Party Services</h6>
+                        <p>Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.</p>
+                        
+                        <h6>9. Data Retention</h6>
+                        <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+                        
+                        <h6>10. International Transfers</h6>
+                        <p>If you are located outside the United Kingdom, please note that your information may be transferred to and processed in the UK, where our servers are located.</p>
+                        
+                        <h6>11. Children's Privacy</h6>
+                        <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+                        
+                        <h6>12. Changes to This Policy</h6>
+                        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                        
+                        <h6>13. Contact Us</h6>
+                        <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+                        <ul>
+                            <li><strong>Email:</strong> sales@uniqevo.co.uk</li>
+                            <li><strong>Phone:</strong> +44 7827314753</li>
+                            <li><strong>Address:</strong> Willett House, Queens Road West, Plaistow, London E13 0RX, United Kingdom</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- All JavaScript files
     ================================================== -->
     <script src="assets/js/jquery.min.js"></script>
@@ -876,6 +1039,8 @@
     <!-- Custom script for this template -->
     <script src="assets/js/gsap-script.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/hero-slider.js"></script>
+    <script src="assets/js/search.js"></script>
 </body>
 
 </html>

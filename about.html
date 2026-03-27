@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,13 +22,87 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+    <style>
+        .tech-category h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #007bff;
+        }
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/sass/style.css" rel="stylesheet">
+    <style>
+        .tech-category h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #007bff;
+        }
+        
+        .tech-item {
+            padding: 5px 0;
+            color: #6c757d;
+        }
+        
+        /* Privacy Policy Modal Styles */
+        .privacy-content {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .privacy-content h6 {
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 5px;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-bottom: none;
+        }
+        
+        .modal-title {
+            font-weight: 600;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #e9ecef;
+            background: #f8f9fa;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8, #6a4190);
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
-
         <!-- start preloader -->
         <div class="preloader">
             <div class="vertical-centered-box">
@@ -36,7 +111,7 @@
                     <div class="loader-line-mask">
                         <div class="loader-line"></div>
                     </div>
-                    <img src="assets/images/preloader.png" alt="">
+                    <img src="assets/images/logo.png" alt="Unique Evolution" class="preloader-logo">
                 </div>
             </div>
         </div>
@@ -65,62 +140,11 @@
                                         <li>
                                             <a href="index.html">Home</a>
                                         </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">project</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="project.html">project</a>
-                                                        </li>
-                                                        <li><a href="project-single.html">project Single</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Shop</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="shop-single.html">Shop Single</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">team</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="team.html">team</a>
-                                                        </li>
-                                                        <li><a href="team-single.html">team Single</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="faq.html">faq</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="about.html" class="active">About Us</a>
                                         </li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                                <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                                                <li class="menu-item-has-children">
-                                                    <a href="#">Blog details</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog-single.html">Blog details right
-                                                                sidebar</a>
-                                                        </li>
-                                                        <li><a href="blog-single-left-sidebar.html">Blog details
-                                                                left
-                                                                sidebar</a></li>
-                                                        <li><a href="blog-single-fullwidth.html">Blog details
-                                                                fullwidth</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            <a href="service.html">Services</a>
                                         </li>
                                         <li><a href="contact.html">contact</a></li>
                                     </ul>
@@ -129,7 +153,7 @@
                             </div>
                             <div class="col-lg-2 col-md-5 col-5">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo_new.png"
+                                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"
                                             alt=""></a>
                                 </div>
                             </div>
@@ -140,14 +164,15 @@
                                             <button class="search-toggle-btn"><i
                                                     class="fi flaticon-magnifying-glass"></i></button>
                                             <div class="header-search-form">
-                                                <form>
+                                                <form id="siteSearchForm" onsubmit="return false;">
                                                     <div>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Search here...">
+                                                        <input type="text" class="form-control" id="siteSearchInput"
+                                                            placeholder="Search here..." autocomplete="off">
                                                         <button type="submit"><i
                                                                 class="fi flaticon-magnifying-glass"></i></button>
                                                     </div>
                                                 </form>
+                                                <div id="searchResults" class="search-results-dropdown"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -175,75 +200,134 @@
                 </nav>
             </div>
         </header>
+        <!-- end of header -->
 
-        <!-- start of breadcumb -->
-        <div class="breadcumb-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="breadcumb-wrap">
-                            <h2>Live Brighter & Work Smarter</h2>
-                            <h3>about us</h3>
+        <!-- start hero section -->
+        <section class="wpo-hero-section">
+            <div class="container-fluid">
+                <div class="hero-wapper">
+                    <div class="hero-content">
+                        <div class="hero-title wow fadeInUp" data-wow-delay="0.0s">
+                            <span>Innovative Software Solutions That Drive Success.</span>
                         </div>
+                        <div class="hero-sub-title wow fadeInUp" data-wow-delay="0.3s">
+                            <h2>About <span class="multicolor-text">Unique</span> <span class="blue-text">Evolution</span></h2>
+                        </div>
+                        <div class="hero-btns wow fadeInUp" data-wow-delay="0.6s">
+                            <a href="#our-story" class="theme-btn-s2">Our Story</a>
+                            <a href="#contact" class="theme-btn-s3"><span class="rolling-text">Get In Touch</span></a>
+                        </div>
+
+                        <div class="hero-content-shape wow fadeInLeftSlow" data-wow-duration="1200ms">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="874" height="496" viewBox="0 0 874 496"
+                                fill="none">
+                                <foreignObject x="-40" y="-40" width="954" height="576">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="backdrop-filter:blur(20px);clip-path:url(#bgblur_0_4454_3012_clip_path);height:100%;width:100%">
+                                    </div>
+                                </foreignObject>
+                                <g data-figma-bg-blur-radius="40">
+                                    <mask id="path-1-inside-1_4454_3012" fill="white">
+                                        <path
+                                            d="M663 155C663 173.225 677.775 188 696 188H841C859.225 188 874 202.775 874 221V463C874 481.225 859.225 496 841 496L33 496C14.7746 496 0 481.225 0 463L0 33C0 14.7746 14.7746 0 33 0L630 0C648.225 0 663 14.7746 663 33V155Z" />
+                                    </mask>
+                                    <path
+                                        d="M663 155C663 173.225 677.775 188 696 188H841C859.225 188 874 202.775 874 221V463C874 481.225 859.225 496 841 496L33 496C14.7746 496 0 481.225 0 463L0 33C0 14.7746 14.7746 0 33 0L630 0C648.225 0 663 14.7746 663 33V155Z"
+                                        fill="white" />
+                                    <path
+                                        d="M696 188V189H841V188V187H696V188ZM874 221H873V463H874H875V221H874ZM841 496V495L33 495V496V497L841 497V496ZM0 463H1L1 33H0H-1L-1 463H0ZM33 0V1L630 1V0V-1L33 -1V0ZM663 33H662V155H663H664V33H663ZM630 0V1C647.673 1 662 15.3269 662 33H663H664C664 14.2223 648.778 -1 630 -1V0ZM0 33H1C1 15.3269 15.3269 1 33 1V0V-1C14.2223 -1 -1 14.2223 -1 33H0ZM33 496V495C15.3269 495 1 480.673 1 463H0H-1C-1 481.778 14.2223 497 33 497V496ZM874 463H873C873 480.673 858.673 495 841 495V496V497C859.778 497 875 481.778 875 463H874ZM841 188V189C858.673 189 873 203.327 873 221H874H875C875 202.222 859.778 187 841 187V188ZM696 188V187C678.327 187 664 172.673 664 155H663H662C662 173.778 677.222 189 696 189V188Z"
+                                        fill="black" fill-opacity="0.09" mask="url(#path-1-inside-1_4454_3012)" />
+                                </g>
+                                <defs>
+                                    <clipPath id="bgblur_0_4454_3012_clip_path" transform="translate(40 40)">
+                                        <path
+                                            d="M663 155C663 173.225 677.775 188 696 188H841C859.225 188 874 202.775 874 221V463C874 481.225 859.225 496 841 496L33 496C14.7746 496 0 481.225 0 463L0 33C0 14.7746 14.7746 0 33 0L630 0C648.225 0 663 14.7746 663 33V155Z" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="shape-2">
+                        <img src="assets/images/hero/shape-2.png" alt="shape">
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end of breadcumb-->
+        </section>
+        <!-- end hero section -->
 
         <!-- start about section -->
-        <section class="wpo-about-section">
+        <section class="wpo-about-section section-padding" id="our-story">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-12">
                         <div class="about-title-left wow fadeInLeftSlow" data-wow-duration="1200ms">
                             <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>about us</span>
-                            <!-- <span>about us</span> -->
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-12 col-12">
                         <div class="about-title-right">
-                            <h2 class="poort-text poort-in-right">At <span>electriany,</span>we’re not just electricians
-                                we’re <span>problem solvers</span>, safety experts &
-                                service professionals. With over 10 of hands-
-                                <span>on experience</span>,
+                            <h2 class="poort-text poort-in-right">At <span style="color: #007bff;">Unique Evolution,</span>we're not just
+                                <span style="color: #0056b3;">developers</span> we're <span style="color: #0066cc;">digital innovators</span>,
+                                <span style="color: #004d99;">tech experts</span> & <span style="color: #0080ff;">solution architects</span>.
+                                With over <span style="color: #0066cc;">10 years</span> of hands-
+                                <span style="color: #0056b3;">on experience</span>,
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div class="about-max">
-                    <div class="about-wrap">
-                        <div class="about-items">
-                            <div class="icon">
-                                <img src="assets/images/about/icon-1.svg" alt="icon">
-                            </div>
-                            <div class="about-text">
-                                <h3>expertise area</h3>
-                                <ul>
-                                    <li><span> Trusted & Vetted Electricity</span></li>
-                                    <li><span>Customizable Electricity Plans</span></li>
-                                    <li><span>Affordable & Transparent Pricing</span></li>
-                                    <li><span>Satisfaction Guarantee</span></li>
-                                </ul>
+                <div class="about-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="about-text-content">
+                                <p>We are a team of passionate developers, designers, and technology enthusiasts who believe in the power of software to transform businesses and create meaningful impact.</p>
+                                <p>Our journey began with a simple mission: to bridge the gap between innovative ideas and technical execution. Today, we've grown into a trusted partner for businesses worldwide, delivering solutions that drive growth and innovation.</p>
+                                <div class="about-features">
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Custom Software Development</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Web & Mobile Applications</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>UI/UX Design Excellence</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Cloud Solutions & DevOps</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>E-Commerce & Marketplace Platforms</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Accounting & Financial Software</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>AI & Machine Learning Solutions</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>ERP & Business Management Systems</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Browser Extensions & Automation</span>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="ti ti-check"></i>
+                                        <span>Data Analytics & ETL Pipelines</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="about-items">
-                            <div class="icon">
-                                <img src="assets/images/about/icon-2.svg" alt="icon">
-                            </div>
-                            <div class="about-text">
-                                <h3>Our Mission</h3>
-                                <ul>
-                                    <li><span> Trusted & Vetted Electricity</span></li>
-                                    <li class="active"><span>Customizable Electricity Plans</span></li>
-                                    <li><span>Affordable & Transparent Pricing</span></li>
-                                    <li><span>Satisfaction Guarantee</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="about-items">
-                            <div class="items-image">
-                                <img src="assets/images/about/1.jpg" alt="image">
+                        <div class="col-lg-6 col-12">
+                            <div class="about-image">
+                                <img src="assets/images/about/1.jpg" alt="About Us">
                             </div>
                         </div>
                     </div>
@@ -252,377 +336,237 @@
         </section>
         <!-- end about section -->
 
-        
-
-        <!--start service-->
-        <section class="wpo-service-section">
+        <!-- start company values section -->
+        <section class="wpo-values-section section-padding">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-12">
                         <div class="wpo-section-title">
-                            <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Our
-                                solution</span>
-                            <h2 class="poort-text poort-in-right">Professional Services Tailored
-                                for You Reliable Solutions</h2>
-                            <p>communication and utilizes cutting edge logistic planning to get your shipment completed
-                                on time. itself founded of backgrounds, which simply.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-wrap">
-                    <div class="service-items wow fadeInUp" data-wow-duration="1000ms">
-                        <div class="service-default">
-                            <div class="service-bg">
-                                <img src="assets/images/service/icon-1.svg" alt="image">
-                                <h3>Electrical Installation</h3>
-                            </div>
-                        </div>
-                        <div class="service-expanded">
-                            <img class="service-image" src="assets/images/service/2.jpg" alt="Electrical Installation">
-                            <div class="service-content">
-                                <h4><a href="service-single.html">Electrical Installation</a></h4>
-                                <p>Touriex hires great people from a Real Transport
-                                    founded of backgrounds, which simply makes</p>
-
-                                <a class="arrow" href="service-single.html"><i class="ti-arrow-top-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-items wow fadeInUp" data-wow-duration="1200ms">
-                        <div class="service-default">
-                            <div class="service-bg">
-                                <img src="assets/images/service/icon-2.svg" alt="image">
-                                <h3>Wiring & Rewiring</h3>
-                            </div>
-                        </div>
-                        <div class="service-expanded">
-                            <img class="service-image" src="assets/images/service/3.jpg" alt="Electrical Installation">
-                            <div class="service-content">
-                                <h4><a href="service-single.html">Wiring & Rewiring</a></h4>
-                                <p>Touriex hires great people from a Real Transport
-                                    founded of backgrounds, which simply makes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-items active wow fadeInUp" data-wow-duration="1400ms">
-                        <div class="service-default">
-                            <div class="service-bg">
-                                <img src="assets/images/service/icon-1.svg" alt="image">
-                                <h3>Industrial & Commercial</h3>
-                            </div>
-                        </div>
-                        <div class="service-expanded">
-                            <img class="service-image" src="assets/images/service/1.jpg" alt="Electrical Installation">
-                            <div class="service-content">
-                                <h4><a href="service-single.html">Industrial & Commercial</a></h4>
-                                <p>Touriex hires great people from a Real Transport
-                                    founded of backgrounds, which simply makes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-items wow fadeInUp" data-wow-duration="1600ms">
-                        <div class="service-default">
-                            <div class="service-bg">
-                                <img src="assets/images/service/icon-3.svg" alt="image">
-                                <h3>Generator Setup</h3>
-                            </div>
-                        </div>
-                        <div class="service-expanded">
-                            <img class="service-image" src="assets/images/service/4.jpg" alt="Electrical Installation">
-                            <div class="service-content">
-                                <h4><a href="service-single.html">Generator Setup</a></h4>
-                                <p>Touriex hires great people from a Real Transport
-                                    founded of backgrounds, which simply makes</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-items wow fadeInUp" data-wow-duration="1800ms">
-                        <div class="service-default">
-                            <div class="service-bg">
-                                <img src="assets/images/service/icon-4.svg" alt="image">
-                                <h3>Electrical Installation</h3>
-                            </div>
-                        </div>
-                        <div class="service-expanded">
-                            <img class="service-image" src="assets/images/service/5.jpg" alt="Electrical Installation">
-                            <h3>Electrical Installation</h3>
-                            <div class="service-content">
-                                <h4><a href="service-single.html">Electrical Safety Audit</a></h4>
-                                <p>Touriex hires great people from a Real Transport
-                                    founded of backgrounds, which simply makes</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="shape">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0 0 C0.95492315 -0.00226556 1.90984629 -0.00453111 2.8937065 -0.00686532 C6.06608773 -0.01315201 9.23842565 -0.01237941 12.41081238 -0.0115509 C14.69658462 -0.0145457 16.98235636 -0.01794897 19.26812744 -0.02172852 C25.45829608 -0.03053948 31.64845089 -0.03290539 37.83862519 -0.0335443 C41.71060151 -0.03425638 45.58257434 -0.03639369 49.45454979 -0.03904152 C62.27859919 -0.0478085 75.10263746 -0.05246243 87.92668942 -0.05171105 C88.61657695 -0.05167109 89.30646448 -0.05163113 90.01725769 -0.05158997 C91.0533659 -0.05152864 91.0533659 -0.05152864 92.11040559 -0.05146609 C103.30102578 -0.05105976 114.4916123 -0.06062867 125.68222276 -0.07472833 C137.19856219 -0.08912286 148.71488088 -0.09581408 160.23122996 -0.09513456 C166.68640349 -0.09488015 173.14153888 -0.09769977 179.59670448 -0.10831261 C185.66982179 -0.11802541 191.74286473 -0.11805097 197.81598473 -0.11079597 C200.03747542 -0.10975413 202.25897083 -0.1120891 204.48045349 -0.11815643 C225.32569193 -0.17137614 242.7304994 0.45405382 259.00138855 15.13371277 C268.36797554 25.735957 272.67994512 36.90841451 273.37638855 50.88371277 C274.30775193 65.5329537 279.77131193 77.98893253 290.4662323 88.09465027 C303.07175297 98.23345118 318.77397042 99.5431656 334.37638855 99.82121277 C335.70975249 99.85451438 337.04308703 99.88901496 338.37638855 99.92472839 C341.58463668 100.00609701 344.79264961 100.07559973 348.00138855 100.13371277 C348.00138855 103.43371277 348.00138855 106.73371277 348.00138855 110.13371277 C189.27138855 110.13371277 30.54138855 110.13371277 -132.99861145 110.13371277 C-132.99861145 106.83371277 -132.99861145 103.53371277 -132.99861145 100.13371277 C-131.83627991 100.11183899 -131.83627991 100.11183899 -130.65046692 100.08952332 C-99.35072643 99.80488703 -99.35072643 99.80488703 -72.99861145 84.32511902 C-69.60803976 80.61005902 -67.21163838 76.63421096 -64.99861145 72.13371277 C-64.60802551 71.34867371 -64.21743958 70.56363464 -63.8150177 69.75480652 C-61.20940495 63.65595469 -60.54579085 57.73394856 -59.99861145 51.19621277 C-58.74060685 36.26412527 -54.19292424 23.17165318 -42.9322052 12.68840027 C-29.95390178 2.25331994 -16.15744064 -0.02867834 0 0 Z "
-                            fill="#fff" transform="translate(132.9986114501953,10.866287231445313)" />
-                    </svg>
-
-                </div>
-                <div class="service-btn">
-                    <a href="contact.html" class="theme-btn-s2">Book An Appointment</a>
-                </div>
-                <div class="box"></div>
-                <div class="box-2"></div>
-            </div>
-        </section>
-        <!--End  service-->
-
-        <!--start feature section-->
-        <section class="wpo-feature-section section-padding">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-8 col-12">
-                        <div class="wpo-section-title">
-                            <span>Core features</span>
-                            <h2 class="poort-text poort-in-right">Our licensed electricians are trained to
-                                deliver top-quality solutions with safety.
-                                We believe in clean work</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-max">
-                    <div class="feature-wrap owl-carousel">
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/1.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">Licensed &
-                                        Experienced Team</a></h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/2.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">24/7 Emergency
-                                        Support</a></h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/3.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">Guaranteed
-                                        Quality Service</a></h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/4.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">Affordable &
-                                        Transparent Pricing</a></h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/5.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">10+ Years
-                                        of Experience</a>
-                                </h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                        <div class="feature-items">
-                            <div class="icon">
-                                <img src="assets/images/feature/6.svg" alt="icon">
-                            </div>
-                            <div class="text">
-                                <h3><a href="service-single.html">Warranty
-                                        <br>on Work</a></h3>
-                            </div>
-                            <div class="arrow-icon">
-                                <a href="service-single.html"><img src="assets/images/arrow-top.png" alt="icon"
-                                        class="icon-active">
-                                    <img src="assets/images/arrow-top-hover.png" alt="icon" class="icon-hover"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--end feature section-->
-
-        
-
-        <!--start odometer section-->
-        <section class="wpo-odometer-section">
-            <div class="container">
-                <div class="odometer-title wow fadeInUp" data-wow-duration="1200ms">
-                    <h2>“Where Heart Health Meets Advanced Care and Unwavering</h2>
-                </div>
-                <div class="odometer-content">
-                    <div class="odometer-items wow fadeInUp" data-wow-delay="0.0s">
-                        <h2><span class="odometer" data-count="3">000</span></h2>
-                        <h3>3+ Years of Experience</h3>
-                    </div>
-                    <div class="odometer-items wow fadeInUp" data-wow-delay="0.1s">
-                        <h2><span class="odometer" data-count="75">00</span><span class="small">k</span></h2>
-                        <h3>Satisfied Clients</h3>
-                    </div>
-                    <div class="odometer-items wow fadeInUp" data-wow-delay="0.2s">
-                        <h2><span class="odometer" data-count="134">00</span></h2>
-                        <h3>Team Members</h3>
-                    </div>
-                    <div class="odometer-items wow fadeInUp" data-wow-delay="0.3s">
-                        <h2><span class="odometer" data-count="85">00</span></h2>
-                        <h3>Customer Retention Rate</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--end odometer section-->
-
-        <!--start project section-->
-        <section class="wpo-project-section">
-            <div class="project-wrapper">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 col-12">
-                            <div class="wpo-section-title-s2">
-                                <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Work gallery</span>
-                                <h2 class="poort-text poort-in-right">we've powered over 200+
-                                    successful projects.</h2>
-                                <p>communication and utilizes cutting edge logistic planning to get your shipment
-                                    completed
-                                    on time. itself founded of backgrounds, which simply.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-12">
-                            <div class="title-btn-right wow fadeInRightSlow" data-wow-duration="1000ms">
-                                <a href="contact.html" class="theme-btn-s2">Book An Appointment</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="project-slider owl-carousel">
-                        <div class="project-card">
-                            <div class="image">
-                                <img src="assets/images/project/1.jpg" alt="image">
-                                <div class="content">
-                                    <h2><a href="project-single.html">Power Grid Expansion</a></h2>
-                                    <div class="icon"><a href="project-single.html"><img
-                                                src="assets/images/arrow-top-hover.png" alt="icon"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="image">
-                                <img src="assets/images/project/2.jpg" alt="image">
-                                <div class="content">
-                                    <h2><a href="project-single.html">Guaranteed Quality Service</a></h2>
-                                    <div class="icon"><a href="project-single.html"><img
-                                                src="assets/images/arrow-top-hover.png" alt="icon"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="image">
-                                <img src="assets/images/project/3.jpg" alt="image">
-                                <div class="content">
-                                    <h2><a href="project-single.html">Electric Panel Repair</a></h2>
-                                    <div class="icon"><a href="project-single.html"><img
-                                                src="assets/images/arrow-top-hover.png" alt="icon"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="image">
-                                <img src="assets/images/project/4.jpg" alt="image">
-                                <div class="content">
-                                    <h2><a href="project-single.html">House Maintenance</a></h2>
-                                    <div class="icon"><a href="project-single.html"><img
-                                                src="assets/images/arrow-top-hover.png" alt="icon"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--end project section-->
-
-        <!--start history-section-->
-        <section class="wpo-history-section section-padding">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-10 col-12">
-                        <div class="wpo-section-title">
-                            <span>Our starting history</span>
-                            <h2 class="poort-text poort-in-right">Since our inception in 2022, we
-                                have been dedicated to pioneering
-                                the electricty industry in UK</h2>
+                            <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Our Values</span>
+                            <h2 class="poort-text poort-in-right">Core Principles That Guide Our Innovation</h2>
+                            <p>Our values are the foundation of everything we build and the relationships we nurture with our clients.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="history-item wow fadeInUp" data-wow-duration="1000ms">
-                            <h2>01</h2>
-                            <div class="text">
-                                <h3>Book a Service</h3>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="1000ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-lightbulb"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Innovation First</h3>
+                                <p>We constantly push boundaries and explore cutting-edge technologies to deliver solutions that transform businesses.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="history-item wow fadeInUp" data-wow-duration="1200ms">
-                            <h2>02</h2>
-                            <div class="text">
-                                <h3>Get a Free Estimate</h3>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="1200ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-shield-check"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Quality Assurance</h3>
+                                <p>Every line of code is crafted with precision, ensuring robust, secure, and scalable solutions that exceed expectations.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="history-item wow fadeInUp" data-wow-duration="1400ms">
-                            <h2>03</h2>
-                            <div class="text">
-                                <h3>Professional Work Execution</h3>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="1400ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-users"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Client-Centric Approach</h3>
+                                <p>Your success is our success. We listen, understand, and collaborate to create solutions that truly meet your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="1600ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-rocket"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Agile Excellence</h3>
+                                <p>We embrace flexibility and rapid iteration, ensuring we adapt quickly to changing requirements and market dynamics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="1800ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-lock"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Security by Design</h3>
+                                <p>Security is not an afterthought. We build robust security measures into every layer of our solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="value-card wow fadeInUp" data-wow-duration="2000ms">
+                            <div class="value-icon">
+                                <div class="icon-bg">
+                                    <i class="ti ti-leaf"></i>
+                                </div>
+                            </div>
+                            <div class="value-content">
+                                <h3>Sustainable Growth</h3>
+                                <p>We create solutions that not only solve today's challenges but are built to scale and evolve with your business.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--end history-section-->
+        <!-- end company values section -->
+
+        <!-- start timeline section -->
+        <section class="wpo-timeline-section section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12">
+                        <div class="wpo-section-title">
+                            <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Our Journey</span>
+                            <h2 class="poort-text poort-in-right">Our Journey: Milestones in Innovation</h2>
+                            <p>Since our inception in 2022, we've rapidly evolved, achieving significant milestones every six months in our journey of software innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-wrap">
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="1000ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022 H1</div>
+                            <h3 style="color: #007bff;">Innovation Hub Established</h3>
+                            <p>Established our R&D division focusing on emerging technologies like AI, blockchain, and IoT solutions for future-ready applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="1200ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022 H2</div>
+                            <h3 style="color: #007bff;">Initial Project Successes</h3>
+                            <p>Successfully delivered initial projects, laying the groundwork for our reputation as a reliable partner in complex software development.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="1400ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023 H1</div>
+                            <h3 style="color: #007bff;">Team Expansion & Service Growth</h3>
+                            <p>Grew our team to 15+ experts and expanded our service offerings to include cloud solutions and mobile app development.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="1600ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023 H2</div>
+                            <h3 style="color: #007bff;">Significant Project Milestones</h3>
+                            <p>Reached 150+ successful projects milestone, demonstrating our capability to deliver high-quality solutions consistently.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="1800ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024 H1</div>
+                            <h3 style="color: #007bff;">Global Client Base Expansion</h3>
+                            <p>Expanded our client base across 3 continents, achieving a 98% satisfaction rate and solidifying our global presence.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item wow fadeInUp" data-wow-duration="2000ms">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024 H2</div>
+                            <h3 style="color: #007bff;">Future Forward Initiatives</h3>
+                            <p>Continuing our journey of innovation, focusing on sustainable technology solutions and pushing the boundaries of what's possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end timeline section -->
+
+
+        <!-- start technology stack section -->
+        <section class="wpo-tech-section section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12">
+                        <div class="wpo-section-title text-center">
+                            <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Technology Stack</span>
+                            <h2 class="poort-text poort-in-right">Cutting-Edge Technologies We Master</h2>
+                            <p>We leverage the latest tools and frameworks to build robust, scalable, and future-proof solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="tech-category text-center frontend-color">
+                            <h3>Frontend Development</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">React</div>
+                                <div class="tech-item">Vue.js</div>
+                                <div class="tech-item">Angular</div>
+                                <div class="tech-item">Next.js</div>
+                                <div class="tech-item">TypeScript</div>
+                                <div class="tech-item">Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="tech-category text-center backend-color">
+                            <h3>Backend Development</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">Node.js</div>
+                                <div class="tech-item">Python</div>
+                                <div class="tech-item">PHP</div>
+                                <div class="tech-item">Java</div>
+                                <div class="tech-item">.NET</div>
+                                <div class="tech-item">GraphQL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="tech-category text-center mobile-color">
+                            <h3>Mobile Development</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">React Native</div>
+                                <div class="tech-item">Flutter</div>
+                                <div class="tech-item">Swift</div>
+                                <div class="tech-item">Kotlin</div>
+                                <div class="tech-item">Ionic</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="tech-category text-center cloud-devops-color">
+                            <h3>Cloud & DevOps</h3>
+                            <div class="tech-items">
+                                <div class="tech-item">AWS</div>
+                                <div class="tech-item">Azure</div>
+                                <div class="tech-item">Google Cloud</div>
+                                <div class="tech-item">Docker</div>
+                                <div class="tech-item">Kubernetes</div>
+                                <div class="tech-item">CI/CD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end technology stack section-->
 
         <!-- Start wpo-faq-section -->
         <section class="wpo-faq-section">
@@ -632,12 +576,11 @@
                         <div class="col-lg-6 col-12">
                             <div class="wpo-faq-box wow fadeInLeftSlow" data-wow-duration="1000ms">
                                 <div class="wpo-section-title-s2">
-                                    <span><i><img src="assets/images/title-icon-2.png" alt=""></i>faq</span>
-                                    <h2 class="poort-text poort-in-right">Freequently ask questions</h2>
-                                    <p>communication and utilizes cutting edge logistic planning to get your shipment
-                                        completed on time. itself founded of backgrounds, which simply.</p>
+                                    <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>faq</span>
+                                    <h2 class="poort-text poort-in-right">Frequently asked questions</h2>
+                                    <p>Get answers to common questions about our software development services and how we can help transform your business with cutting-edge technology solutions.</p>
                                 </div>
-                                <a href="contact.html" class="theme-btn-s2">Book An Appointment</a>
+                                <a href="contact.html" class="theme-btn-s2">Get Free Consultation</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-12">
@@ -648,15 +591,15 @@
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#collapseOne" aria-expanded="true"
                                                 aria-controls="collapseOne">
-                                                How can I get a venture capitalist to pay?
+                                                How do I choose the right technology stack for my project?
                                             </button>
                                         </h3>
                                         <div id="collapseOne" class="accordion-collapse collapse show"
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <p>communication and utilizes cutting edge logistic Electrician to
-                                                    get your shipment completed on time. itself founded of
-                                                    backgrounds, which simply.</p>
+                                                <p>Choosing the right technology stack depends on your project requirements,
+                                                    scalability needs, team expertise, and long-term maintenance considerations.
+                                                    We help you evaluate factors like performance, security, and development speed.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -665,15 +608,15 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
-                                                How do you find different criteria in your process?
+                                                What is the typical timeline for a software project?
                                             </button>
                                         </h3>
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <p>communication and utilizes cutting edge logistic Electrician to
-                                                    get your shipment completed on time. itself founded of
-                                                    backgrounds, which simply.</p>
+                                                <p>Project timelines vary based on complexity and scope. Simple websites
+                                                    typically take 4-8 weeks, while complex web applications or mobile apps
+                                                    can take 3-6 months. We provide detailed timelines during consultation.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -682,15 +625,15 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree">
-                                                How can I get a venture capitalist to pay?
+                                                Do you provide ongoing maintenance and support?
                                             </button>
                                         </h3>
                                         <div id="collapseThree" class="accordion-collapse collapse"
                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <p>communication and utilizes cutting edge logistic Electrician to
-                                                    get your shipment completed on time. itself founded of
-                                                    backgrounds, which simply.</p>
+                                                <p>Yes, we offer comprehensive maintenance and support packages to ensure
+                                                    your software remains secure, up-to-date, and performs optimally.
+                                                    We provide bug fixes, security updates, and feature enhancements.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -699,15 +642,15 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                 aria-expanded="false" aria-controls="collapseFour">
-                                                How likely will it be that I can get vent financing?
+                                                What programming languages and frameworks do you specialize in?
                                             </button>
                                         </h3>
                                         <div id="collapseFour" class="accordion-collapse collapse"
                                             aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <p>communication and utilizes cutting edge logistic Electrician to
-                                                    get your shipment completed on time. itself founded of
-                                                    backgrounds, which simply.</p>
+                                                <p>We specialize in modern technologies including React, Vue.js, Angular for frontend;
+                                                    Node.js, Python, PHP for backend; React Native and Flutter for mobile apps;
+                                                    and cloud platforms like AWS, Azure, and Google Cloud.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -716,15 +659,15 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapsefive"
                                                 aria-expanded="false" aria-controls="collapseFour">
-                                                should option pool for employees ?
+                                                How do you ensure the security of my software application?
                                             </button>
                                         </h3>
                                         <div id="collapsefive" class="accordion-collapse collapse"
                                             aria-labelledby="headingfive" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-                                                <p>communication and utilizes cutting edge logistic Electrician to
-                                                    get your shipment completed on time. itself founded of
-                                                    backgrounds, which simply.</p>
+                                                <p>We implement industry-standard security practices including secure coding,
+                                                    regular security audits, encryption, authentication, authorization,
+                                                    and compliance with standards like OWASP guidelines and GDPR.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -746,186 +689,20 @@
                 <div class="marquee_container">
                     <div>
                         <h2 class="marquee-s2">
-                            <small>Schedule a Free Electrical System Evaluation. Plan Your Free Energy
-                                Efficiency Consultation</small>
+                            <small>Transform Your Business with Innovative Software Solutions. Schedule Your Free
+                                Consultation Today</small>
                         </h2>
                     </div>
                 </div>
                 <div class="booking-btn moving-cursor"><a class="btn-wrapper btn-move" href="contact.html"><small>Get
-                            Schedule
-                            Now</small></a></div>
+                            Free
+                            Consultation</small></a></div>
             </div>
         </section>
         <!-- end text-marquee -->
 
-        <!-- start testimonial-sectoin -->
-        <Section class="wpo-testimonial-section">
-            <div class="container">
-                <div class="testimonial-wrap testimonial-slider">
-                    <div class="image slider-for">
-                        <div class="item wow fadeInLeftSlow" data-wow-duration="1000ms">
-                            <span class="feedback"><i class="flaticon-double-quotes"></i></span>
-                            <img src="assets/images/testimonial/iamge.jpg" alt="image">
-                            <ul>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <span class="feedback"><i class="flaticon-double-quotes"></i></span>
-                            <img src="assets/images/testimonial/iamge-2.jpg" alt="image">
-                            <ul>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                                <li><i class="flaticon-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="content-wrap wow fadeInRightSlow" data-wow-duration="1000ms">
-                        <div class="slider-nav">
-                            <div class="content">
-                                <p>Climb the mountain not to plant your flag but to
-                                    embrace the ways challenge, enjoy the air, and
-                                    behold the. Climb it see the world, not so the
-                                    world can see you. This is due to their excellent
-                                    service competitive pricing</p>
-                                <div class="client-name">
-                                    <h4>Robert J. Hare/</h4>
-                                    <span>Freight Manager</span>
-                                </div>
 
-                            </div>
-                            <div class="content">
-                                <p>
-                                    I recently used for my logistics needs, and I am
-                                    thoroughly impressed with their exceptional service. I contacted
-                                    them, team demonstrated and making the entire
-                                    process smooth and hassle-free.
-                                </p>
-                                <div class="client-name">
-                                    <h4>Robert J. Hare/</h4>
-                                    <span>Freight Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Section>
-        <!--end testimonial-section-->
 
-        <!--start cta-section-->
-        <section class="wpo-cta-section moving-cursor-wrap">
-            <div class="container-fluid">
-                <div class="cta-content">
-                    <div class="cta-title wow fadeInUp" data-wow-delay="0.0s">
-                        <span>Trusted, Fast & Affordable Service at Your Doorstep.</span>
-                    </div>
-                    <div class="cta-sub-title wow fadeInUp" data-wow-delay="0.2s">
-                        <h2>Powering Your <br><span>World</span> Safely <br>Efficiently &
-                            <span>Reliably</span>
-                        </h2>
-                    </div>
-                    <div class="cta-btns wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="contact.html" class="theme-btn-s2">Book An Appointment</a>
-                        <a href="about.html" class="theme-btn-s3"><span class="rolling-text">learn More</span></a>
-                    </div>
-                    <div class="cta-content-shape wow fadeInLeftSlow" data-wow-duration="1200ms">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="755" height="450" viewBox="0 0 755 450"
-                            fill="none">
-                            <foreignObject x="-40" y="-40" width="835" height="530">
-                                <div xmlns="http://www.w3.org/1999/xhtml"
-                                    style="backdrop-filter:blur(20px);clip-path:url(#bgblur_0_4454_2791_clip_path);height:100%;width:100%">
-                                </div>
-                            </foreignObject>
-                            <g data-figma-bg-blur-radius="40">
-                                <mask id="path-1-inside-1_4454_2791" fill="white">
-                                    <path
-                                        d="M584 139C584 157.225 598.775 172 617 172L722 172C740.225 172 755 186.775 755 205V417C755 435.225 740.225 450 722 450L33 450C14.7746 450 0 435.225 0 417L0 33C0 14.7746 14.7746 0 33 0L551 0C569.225 0 584 14.7746 584 33V139Z" />
-                                </mask>
-                                <path
-                                    d="M584 139C584 157.225 598.775 172 617 172L722 172C740.225 172 755 186.775 755 205V417C755 435.225 740.225 450 722 450L33 450C14.7746 450 0 435.225 0 417L0 33C0 14.7746 14.7746 0 33 0L551 0C569.225 0 584 14.7746 584 33V139Z"
-                                    fill="white" />
-                                <path
-                                    d="M617 172V173L722 173V172V171L617 171V172ZM755 205H754V417H755H756V205H755ZM722 450V449L33 449V450V451L722 451V450ZM0 417H1L1 33H0H-1L-1 417H0ZM33 0V1L551 1V0V-1L33 -1V0ZM584 33H583V139H584H585V33H584ZM551 0V1C568.673 1 583 15.3269 583 33H584H585C585 14.2223 569.778 -1 551 -1V0ZM0 33H1C1 15.3269 15.3269 1 33 1V0V-1C14.2223 -1 -1 14.2223 -1 33H0ZM33 450V449C15.3269 449 1 434.673 1 417H0H-1C-1 435.778 14.2223 451 33 451V450ZM755 417H754C754 434.673 739.673 449 722 449V450V451C740.778 451 756 435.778 756 417H755ZM722 172V173C739.673 173 754 187.327 754 205H755H756C756 186.222 740.778 171 722 171V172ZM617 172V171C599.327 171 585 156.673 585 139H584H583C583 157.778 598.222 173 617 173V172Z"
-                                    fill="black" fill-opacity="0.09" mask="url(#path-1-inside-1_4454_2791)" />
-                            </g>
-                            <defs>
-                                <clipPath id="bgblur_0_4454_2791_clip_path" transform="translate(40 40)">
-                                    <path
-                                        d="M584 139C584 157.225 598.775 172 617 172L722 172C740.225 172 755 186.775 755 205V417C755 435.225 740.225 450 722 450L33 450C14.7746 450 0 435.225 0 417L0 33C0 14.7746 14.7746 0 33 0L551 0C569.225 0 584 14.7746 584 33V139Z" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="booking-btn"><a class="btn-wrapper moving-cursor" href="contact.html"><small><i><img
-                                    src="assets/images/arrow-up.svg" alt="icon"></i>get in touch</small></a></div>
-            </div>
-        </section>
-        <!--end cta-section -->
-
-        <!-- start blog-section -->
-        <section class="wpo-blog-section section-padding">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 col-12">
-                        <div class="wpo-section-title-s2">
-                            <span><i><img src="assets/images/title-icon-2.png" alt="icon"></i>Updated news &
-                                blogs</span>
-                            <h2 class="poort-text poort-in-right">Stay Updated with Our
-                                Latest Insights</h2>
-                            <p>communication and utilizes cutting edge logistic planning to get your shipment
-                                completed on time. itself founded of backgrounds, which simply.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-12">
-                        <div class="title-btn-right wow fadeInRightSlow" data-wow-duration="1000ms">
-                            <a href="contact.html" class="theme-btn-s2">Book An Appointment</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-5 col-md-12 col-12">
-                        <div class="blog-card wow fadeInLeftSlow" data-wow-duration="1000ms">
-                            <div class="blog-image">
-                                <img src="assets/images/blog/img-1.jpg" alt="image">
-                            </div>
-                            <div class="blog-text">
-                                <h2><a href="blog-single.html">Innovations in Cardiac Care: What’s Next
-                                        for Heart Health?</a></h2>
-                                <div class="blog-bottom">
-                                    <a class="more-btn" href="blog-single.html">Learn More</a>
-                                    <i class="ti ti-arrow-top-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-12 col-12">
-                        <div class="blog-card wow fadeInRightSlow" data-wow-duration="1000ms">
-                            <div class="blog-image">
-                                <img src="assets/images/blog/img-2.jpg" alt="image">
-                            </div>
-                            <div class="blog-text">
-                                <h3><a href="blog-single.html">The Importance of Regular Heart
-                                        Screenings and Checkups</a></h3>
-                                <div class="blog-bottom">
-                                    <a class="more-btn" href="blog-single.html">Learn More</a>
-                                    <i class="ti ti-arrow-top-right"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end blog-section-->
 
         <!-- Start footer -->
         <footer class="footer-common footer-section-s1">
@@ -936,65 +713,42 @@
                             <div class="marquee_container">
                                 <div>
                                     <h2 class="marquee-s2">
-                                        <small>Schedule a Free Electrical System Evaluation. Plan Your Free Energy
-                                            Efficiency Consultation</small>
+                                        <small>Transform Your Business with Innovative Software Solutions. Schedule Your Free
+                                            Consultation Today</small>
                                     </h2>
                                 </div>
                             </div>
                             <div class="booking-btn moving-cursor"><a class="btn-wrapper btn-move"
                                     href="contact.html"><small>Get
-                                        Schedule Now</small></a></div>
+                                        Free Consultation</small></a></div>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="footer">
                         <div class="item widget-newsletter fade_bottom">
-                            <h2>Get your home with
-                                electricty today</h2>
+                            <h2>Start your digital transformation today</h2>
                             <div class="newsletter">
                                 <form class="form-fild">
                                     <div class="input-items">
-                                        <input class="fild" type="email" placeholder="Email Address" required>
+                                        <input class="fild" type="email" placeholder="Your Email Address" required>
                                     </div>
                                     <div class="input-btn">
                                         <button type="submit" class="theme-btn-s2">Sign Up</button>
                                     </div>
                                 </form>
-                                <p>By subscribing, you’re accept <a href="contact.html">Privacy Policy</a></p>
+                                <p>By subscribing, you're accept <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" style="cursor: pointer;">Privacy Policy</a></p>
                             </div>
                         </div>
                         <div class="item fade_bottom">
-                            <h2 class="title">Our Devision</h2>
+                            <h2 class="title">Services</h2>
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="service-single.html">Our Services</a></li>
-                                <li><a href="team-single.html">Our Team</a></li>
-                                <li><a href="service-single.html">Open Positions</a></li>
-                                <li><a href="service-single.html">Carers</a></li>
-                                <li><a href="service-single.html">Our Clients</a></li>
-                            </ul>
-                        </div>
-                        <div class="item fade_bottom">
-                            <h2 class="title">Quick Link</h2>
-                            <ul>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                
-                                <li><a href="project-single.html">our project</a></li>
-                                <li><a href="shop.html">Shop page</a></li>
-                                <li><a href="blog-single.html">our blog</a></li>
-                                <li><a href="faq.html">Faq Page</a></li>
-                            </ul>
-                        </div>
-                        <div class="item fade_bottom">
-                            <h2 class="title">our service</h2>
-                            <ul>
-                                <li><a href="service-single.html">Electrical Installation</a></li>
-                                <li><a href="service-single.html">Wiring & Rewiring</a></li>
-                                <li><a href="service-single.html">Industrial & Commercial</a></li>
-                                <li><a href="service-single.html">Generator Setup</a></li>
-                                <li><a href="service-single.html">Electrical Safety Audit</a></li>
-                                <li><a href="service-single.html">24/7 Support</a></li>
+                                <li><a href="service.html">Web Development</a></li>
+                                <li><a href="service.html">Mobile Apps</a></li>
+                                <li><a href="service.html">Custom Software</a></li>
+                                <li><a href="service.html">UI/UX Design</a></li>
+                                <li><a href="service.html">Cloud Solutions</a></li>
+                                <li><a href="contact.html">Get Quote</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1009,11 +763,9 @@
                                         All rights reserved.</p>
                                 </div>
                                 <div class="col-lg-6 col-12">
-                                    <ul class="widget-social">
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                    </ul>
+                                    <div class="widget-social">
+                                        <a href="contact.html">Contact</a> <span style="color: #D1D1D1; margin: 0 10px;">|</span> <a href="service.html">Services</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1026,6 +778,113 @@
     </div>
     <!-- end of page-wrapper -->
 
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="privacy-content">
+                        <p><strong>Last Updated:</strong> January 2025</p>
+                        
+                        <h6>1. Introduction</h6>
+                        <p>Unique Evolution ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                        
+                        <h6>2. Information We Collect</h6>
+                        <p><strong>Personal Information:</strong></p>
+                        <ul>
+                            <li>Name and contact information (email, phone number, address)</li>
+                            <li>Business information (company name, job title)</li>
+                            <li>Project requirements and specifications</li>
+                            <li>Communication preferences</li>
+                        </ul>
+                        
+                        <p><strong>Technical Information:</strong></p>
+                        <ul>
+                            <li>IP address and browser information</li>
+                            <li>Website usage data and analytics</li>
+                            <li>Cookies and similar tracking technologies</li>
+                            <li>Device information and operating system</li>
+                        </ul>
+                        
+                        <h6>3. How We Use Your Information</h6>
+                        <p>We use your information to:</p>
+                        <ul>
+                            <li>Provide and improve our software development services</li>
+                            <li>Communicate with you about projects and services</li>
+                            <li>Send newsletters and marketing communications (with your consent)</li>
+                            <li>Process payments and manage billing</li>
+                            <li>Comply with legal obligations</li>
+                            <li>Analyze website performance and user experience</li>
+                        </ul>
+                        
+                        <h6>4. Information Sharing</h6>
+                        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                        <ul>
+                            <li>With your explicit consent</li>
+                            <li>To comply with legal requirements</li>
+                            <li>With trusted service providers who assist in our operations</li>
+                            <li>In case of business transfers or mergers</li>
+                        </ul>
+                        
+                        <h6>5. Data Security</h6>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes:</p>
+                        <ul>
+                            <li>SSL encryption for data transmission</li>
+                            <li>Secure servers and databases</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Access controls and authentication</li>
+                        </ul>
+                        
+                        <h6>6. Your Rights</h6>
+                        <p>Under applicable data protection laws, you have the right to:</p>
+                        <ul>
+                            <li>Access your personal information</li>
+                            <li>Correct inaccurate data</li>
+                            <li>Request deletion of your data</li>
+                            <li>Object to processing of your data</li>
+                            <li>Data portability</li>
+                            <li>Withdraw consent at any time</li>
+                        </ul>
+                        
+                        <h6>7. Cookies and Tracking</h6>
+                        <p>We use cookies and similar technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookie settings through your browser preferences.</p>
+                        
+                        <h6>8. Third-Party Services</h6>
+                        <p>Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.</p>
+                        
+                        <h6>9. Data Retention</h6>
+                        <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+                        
+                        <h6>10. International Transfers</h6>
+                        <p>If you are located outside the United Kingdom, please note that your information may be transferred to and processed in the UK, where our servers are located.</p>
+                        
+                        <h6>11. Children's Privacy</h6>
+                        <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+                        
+                        <h6>12. Changes to This Policy</h6>
+                        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                        
+                        <h6>13. Contact Us</h6>
+                        <p>If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
+                        <ul>
+                            <li><strong>Email:</strong> sales@uniqevo.co.uk</li>
+                            <li><strong>Phone:</strong> +44 7827314753</li>
+                            <li><strong>Address:</strong> Willett House, Queens Road West, Plaistow, London E13 0RX, United Kingdom</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- All JavaScript files
     ================================================== -->
     <script src="assets/js/jquery.min.js"></script>
@@ -1036,9 +895,19 @@
     <!-- Custom script for this template -->
     <script src="assets/js/gsap-script.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/search.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

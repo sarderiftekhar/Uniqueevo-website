@@ -112,10 +112,10 @@
         &:nth-child(3) {
             max-width: 180px;
             width: 100%;
-            padding-left: 35px;
+            padding-left: 5em;
 
             @media (max-width:1399px) {
-                padding-left: 0;
+                padding-left: 3em;
             }
 
             @media (max-width:991px) {
@@ -462,6 +462,34 @@
         .row {
             border-top: 1px solid #2C2E34;
             padding: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .col-lg-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 50%;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+
+            @media (max-width:991px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+
+                &:first-child,
+                &:last-child {
+                    text-align: center;
+                }
+            }
         }
 
         p {
@@ -514,11 +542,12 @@
             }
 
             a {
-                color: #D1D1D1;
+                color: $white;
                 font-size: 18px;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 26px;
                 transition: all .3s ease-in-out;
+                text-decoration: none;
 
                 @media (max-width:575px) {
                     font-size: 15px;
@@ -528,6 +557,24 @@
                 &:hover {
                     color: $theme-primary-color;
                 }
+            }
+        }
+
+        > a {
+            color: $white;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+
+            @media (max-width:575px) {
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            &:hover {
+                color: $theme-primary-color;
             }
         }
     }
